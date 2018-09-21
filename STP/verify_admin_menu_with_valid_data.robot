@@ -1,11 +1,11 @@
-*** Settings ***
+***Settings***
 Library           Selenium2Library    WITH NAME    se
 
 *** Variables ***
 @{packages}       robotframework-selenium2library
 
 *** Test Cases ***
-verify_admin_menu_with_valid_data
+verify_admin_menu_with_valid_data.robot
     ${chrome_options} =    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
     Call Method    ${chrome_options}    add_argument    headless
     Call Method    ${chrome_options}    add_argument    disable-gpu
@@ -13,7 +13,7 @@ verify_admin_menu_with_valid_data
     Call Method    ${chrome_options}    add_argument    disable-dev-shm-usage
     Call Method    ${chrome_options}    add_argument    no-sandbox
     ${options}=    Call Method    ${chrome_options}    to_capabilities
-    Open Browser    http://111.93.7.182    Chrome    desired_capabilities=${options}
+    Open Browser    http://192.168.50.66    Chrome    desired_capabilities=${options}
     Input Text    xpath=//input[@id='emailid']    veera@gm.com
     Input Password    xpath=//input[@id='pwd']    mypassword
     Click Button    xpath=//button[@class='btn btn-purple btn-block text-uppercase waves-effect waves-light']
