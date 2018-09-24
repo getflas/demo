@@ -13,7 +13,7 @@ verify_admin_menu_with_valid_data.robot
     Call Method    ${chrome_options}    add_argument    disable-dev-shm-usage
     Call Method    ${chrome_options}    add_argument    no-sandbox
     ${options}=    Call Method    ${chrome_options}    to_capabilities
-    Open Browser    http://192.168.50.66    Chrome    desired_capabilities=${options}
+    Open Browser    http://111.93.7.182    Chrome    desired_capabilities=${options}
     Input Text    xpath=//input[@id='emailid']    veera@gm.com
     Input Password    xpath=//input[@id='pwd']    mypassword
     Click Button    xpath=//button[@class='btn btn-purple btn-block text-uppercase waves-effect waves-light']
