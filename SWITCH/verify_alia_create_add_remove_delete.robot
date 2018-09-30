@@ -2,7 +2,8 @@
 Library           Switch.py    WITH NAME    s
 
 *** Variables ***
-@{packages}       robotframework-selenium2library
+@{packages}       robotframework-selenium2library    Collections
+@{stp_server}     os=ubuntu    version=14.04    ip=
 
 *** Test Cases ***
 verify_alia_create_add_remove_delete
